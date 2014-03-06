@@ -1,6 +1,10 @@
 require "rails"
 require "rails/all"
 
+#------------------
+# EXTRACT THIS INTO IT'S OWN GEM
+#
+#
 class MiniConfig < Rails::Application::Configuration
   def paths
     @paths ||= begin
@@ -58,6 +62,9 @@ module Rails
 
 end
 end
+#
+# END EXTRACTION
+#-----------------
 
 class MyApp < Rails::Application
 
