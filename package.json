@@ -1,0 +1,36 @@
+{
+  "name": "rails-ember-cli",
+  "namespace": "rails-ember-cli",
+  "APIMethod": "stub",
+  "version": "0.0.0",
+  "private": true,
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "ember server",
+    "build": "ember build",
+    "test": "ember test",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stefanpenner/ember-app-kit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "~1.2.7",
+    "loom-generators-ember-appkit": "~1.0.2",
+    "originate": "~0.1.5",
+    "loom": "~3.1.2",
+    "broccoli-cli": "0.0.1",
+    "broccoli-es6-concatenator": "0.0.7",
+    "broccoli": "~0.2.0",
+    "broccoli-static-compiler": "0.0.5",
+    "broccoli-template": "0.0.5",
+    "broccoli-uglify-js": "0.0.4",
+    "broccoli-env": "0.0.1"
+  }
+}
