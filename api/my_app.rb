@@ -9,11 +9,11 @@ class MiniConfig < Rails::Application::Configuration
   def paths
     @paths ||= begin
       paths = super
-      paths.add "controllers",     eager_load: true
-      paths.add "models",          eager_load: true
-      paths.add "mailers",         eager_load: true
-      paths.add "initializers",    glob: "**/*.rb"
-      paths.add "routes.rb"
+      paths.add "api/controllers",     eager_load: true
+      paths.add "api/models",          eager_load: true
+      paths.add "api/mailers",         eager_load: true
+      paths.add "api/initializers",    glob: "**/*.rb"
+      paths.add "api/routes.rb"
       paths
     end
   end
@@ -52,7 +52,7 @@ module Rails
   end
 
   initializer :load_routes do |app|
-    paths = self.paths["routes.rb"].existent
+    paths = self.paths["api/routes.rb"].existent
 
     if routes? || paths.any?
       app.routes_reloader.paths.unshift(*paths)
