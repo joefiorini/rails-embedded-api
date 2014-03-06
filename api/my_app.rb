@@ -14,6 +14,7 @@ class MiniConfig < Rails::Application::Configuration
       paths.add "mailers",         eager_load: true
       paths.add "initializers",    glob: "**/*.rb"
       paths.add "routes.rb"
+      paths["public"] = "../dist"
       paths
     end
   end
